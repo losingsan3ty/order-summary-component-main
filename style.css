@@ -1,0 +1,201 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+/* General css */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+:root {
+  --ff-primary: "Red Hat Display", sans-serif;
+  --clr-primary: hsl(245, 75%, 52%);
+  --clr-primary-darker: hsl(223, 47%, 23%);
+  --clr-white: #ffffff;
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-gray: hsl(224, 23%, 55%);
+  --clr-pale-blue-very: hsl(225, 100%, 98%);
+  --spacing-m: 1.6rem;
+  ----spacing-l: 1.6rem;
+  --fs-l: 2.281rem;
+  --fs-ml: 1.602rem;
+  --fs-m: 1.424rem;
+  --fs-s: 1.266rem;
+  --br-radius: 2rem;
+}
+/* /* font-size-scale 1.125 rem /1.266rem / 1.424rem / 1.602rem / 1.802rem / 2.027 / 2.281rem / 2.566rem / 2.887rem / 3. 3.247rem/ 3.653rem / 
+
+spacing system
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+/* - Mobile: 375px
+- Desktop: 1440px */
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--clr-primary-darker);
+  font-weight: 900;
+}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+  overflow-x: hidden;
+}
+/* Set core body defaults */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: var(--ff-primary);
+  text-rendering: optimizeSpeed;
+  font-size: var(--fs-m);
+  color: var(--clr-pale-blue-very);
+  background-color: var(--clr-pale-blue);
+  line-height: 1.6;
+  color: var(--clr-gray);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  background-color: inherit;
+  border: none;
+}
+ul {
+  list-style: none;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*  */
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.grid {
+  display: grid;
+}
+
+.container {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+/*
+/* card */
+.card {
+  z-index: 3;
+  margin: 0 var(--spacing-l);
+  margin-top: 6.4rem;
+  background-color: var(--clr-white);
+  row-gap: var(--spacing-m);
+  align-items: center;
+  border-radius: var(--br-radius);
+  justify-items: center;
+  text-align: center;
+}
+.card-image img {
+  border-radius: var(--br-radius) var(--br-radius) 0 0;
+}
+.background-image {
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  position: absolute;
+}
+.card-content {
+  width: 84.2%;
+  row-gap: var(----spacing-l);
+  padding: var(--spacing-m) 0 var(----spacing-l) 0;
+}
+.primary-heading {
+  font-size: var(--fs-l);
+} /* end of card */
+.card-description {
+  text-align: center;
+}
+.card-price {
+  background-color: #f8f9fe;
+  padding: var(--spacing-m) 0;
+  border-radius: var(--br-radius);
+}
+.btn-change {
+  font-size: var(--fs-s);
+  text-decoration: underline;
+  color: var(--clr-primary);
+  font-weight: 700;
+}
+.music-icon {
+  border-radius: 5rem;
+}
+.card-btn {
+  font-size: var(--fs-ml);
+  background-color: var(--clr-primary);
+  font-weight: 700;
+  padding: var(--spacing-m) 0;
+  border-radius: 1rem;
+
+  color: var(--clr-pale-blue-very);
+}
+.btn-cancel {
+  background-color: inherit;
+  color: var(--clr-gray);
+  font-weight: 900;
+  margin-bottom: spac;
+}
