@@ -72,10 +72,13 @@ body {
 /* Set core body defaults */
 
 body {
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+  justify-content: center;
+  /* background-image: url(./images/pattern-background-mobile.svg);
+  background-position: top;
+  background-repeat: no-repeat; */
   font-family: var(--ff-primary);
   text-rendering: optimizeSpeed;
   font-size: var(--fs-m);
