@@ -246,7 +246,7 @@ ul {
 @media only screen and (min-width: 50em) {
   html,
   body {
-    font-size: 50%;
+    font-size: 70%;
     height: 100%;
     overflow-x: hidden;
   }

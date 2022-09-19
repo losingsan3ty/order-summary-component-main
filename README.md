@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Screenshot%202022-09-19%20at%2018-13-30%20Frontend%20Mentor%20Order%20summary%20card.png)
+![](./images/Screen%20Shot%202022-09-19%20at%2018.45.25.png)
 
 ### Links
 
