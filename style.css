@@ -19,18 +19,22 @@ a:visited {
 :root {
   --ff-primary: "Red Hat Display", sans-serif;
   --clr-primary: hsl(245, 75%, 52%);
-  --clr-primary-darker: hsl(223, 47%, 23%);
+  --clr-primary-darker: #1f2f56;
+  --clr-btn-cancel-active: #303753;
   --clr-white: #ffffff;
+  --clr-main-btn-active: #766cf1;
   --clr-pale-blue: hsl(225, 100%, 94%);
   --clr-gray: hsl(224, 23%, 55%);
   --clr-pale-blue-very: hsl(225, 100%, 98%);
   --spacing-m: 1.6rem;
-  ----spacing-l: 1.6rem;
-  --fs-l: 2.281rem;
+  --spacing-s: 1.2rem;
+  --spacing-l: 2.4rem;
+  --fs-l: 2.3rem;
   --fs-ml: 1.602rem;
   --fs-m: 1.424rem;
   --fs-s: 1.266rem;
-  --br-radius: 2rem;
+  --fs-xs: 1.125rem;
+  --br-radius: 1.7rem;
 }
 /* /* font-size-scale 1.125 rem /1.266rem / 1.424rem / 1.602rem / 1.802rem / 2.027 / 2.281rem / 2.566rem / 2.887rem / 3. 3.247rem/ 3.653rem / 
 
@@ -70,15 +74,16 @@ body {
 body {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   font-family: var(--ff-primary);
   text-rendering: optimizeSpeed;
   font-size: var(--fs-m);
   color: var(--clr-pale-blue-very);
   background-color: var(--clr-pale-blue);
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--clr-gray);
+  position: relative;
 }
 
 /* A elements that don't have a class get default styles */
@@ -122,25 +127,22 @@ ul {
   }
 }
 /*  */
-
 .flex {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
 }
 .grid {
   display: grid;
 }
 
 .container {
-  max-width: 33rem;
+  max-width: 32rem;
   margin: 0 auto;
 }
 /*
 /* card */
 .card {
   z-index: 3;
-  margin: 0 var(--spacing-l);
   margin-top: 6.4rem;
   background-color: var(--clr-white);
   row-gap: var(--spacing-m);
@@ -148,54 +150,145 @@ ul {
   border-radius: var(--br-radius);
   justify-items: center;
   text-align: center;
+  margin-bottom: 9.6rem;
+  -webkit-box-shadow: 0px 21px 18px -4px #c7d0f7;
+  -moz-box-shadow: 0px 21px 18px -4px #c7d0f7;
+  box-shadow: 0px 21px 18px -4px #c7d0f7;
 }
 .card-image img {
   border-radius: var(--br-radius) var(--br-radius) 0 0;
 }
 .background-image {
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  width: 100vw;
   position: absolute;
+  left: 0%;
+  z-index: -1;
 }
+.background-image img {
+  width: 100%;
+  height: 100%;
+}
+
 .card-content {
   width: 84.2%;
-  row-gap: var(----spacing-l);
-  padding: var(--spacing-m) 0 var(----spacing-l) 0;
+  row-gap: var(--spacing-l);
+  padding: var(--spacing-m) 0 var(--spacing-m) 0;
 }
 .primary-heading {
+  margin-top: 0.4rem;
+  margin-bottom: -0.4rem;
   font-size: var(--fs-l);
+  line-height: 1;
 } /* end of card */
 .card-description {
   text-align: center;
+  margin: 0 var(--spacing-s);
+  font-size: 1.5rem;
 }
 .card-price {
+  font-size: var(--fs-ml);
   background-color: #f8f9fe;
+  gap: var(--spacing-l);
   padding: var(--spacing-m) 0;
-  border-radius: var(--br-radius);
+  border-radius: 1rem;
 }
 .btn-change {
   font-size: var(--fs-s);
   text-decoration: underline;
   color: var(--clr-primary);
-  font-weight: 700;
+  font-weight: 800;
+  margin-right: var(--spacing-m);
 }
+.btn-change:active {
+  text-decoration: none;
+  color: var(--clr-main-btn-active);
+}
+.card-subscription {
+  font-size: var(--fs-s);
+  flex: 0 1 70%;
+  gap: var(--spacing-m);
+}
+
 .music-icon {
-  border-radius: 5rem;
+  margin-left: var(--spacing-m);
+  border-radius: 3rem;
+}
+
+.sub-heading {
+  color: var(--clr-primary-darker);
 }
 .card-btn {
+  color: var(--clr-pale-blue);
   font-size: var(--fs-ml);
   background-color: var(--clr-primary);
   font-weight: 700;
-  padding: var(--spacing-m) 0;
+  padding: var(--spacing-s);
   border-radius: 1rem;
-
-  color: var(--clr-pale-blue-very);
+  -webkit-box-shadow: 0px 16px 24px -4px rgba(56, 41, 224, 0.19);
+  -moz-box-shadow: 0px 16px 24px -4px rgba(56, 41, 224, 0.19);
+  box-shadow: 0px 16px 24px -4px rgba(56, 41, 224, 0.19);
+}
+.card-btn:active {
+  background-color: var(--clr-main-btn-active);
 }
 .btn-cancel {
+  font-size: var(--fs-m);
   background-color: inherit;
   color: var(--clr-gray);
   font-weight: 900;
-  margin-bottom: spac;
+  padding-bottom: 1.2rem;
 }
+.btn-cancel:active {
+  color: var(--clr-btn-cancel-active);
+  font-weight: 900;
+}
+
+@media only screen and (min-width: 50em) {
+  html,
+  body {
+    font-size: 50%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  :root {
+    --fs-l: 2.566rem;
+  }
+  .container {
+    max-width: 39.5rem;
+  }
+  .card {
+    margin-top: 9rem;
+    row-gap: var(--spacing-l);
+  }
+  .card-content {
+    width: 77%;
+  }
+  .music-icon {
+    width: 4rem;
+  }
+  .btn-cancel {
+    font-size: calc(var(--spacing-s) + 0.1rem);
+    padding-bottom: 2.4rem;
+  }
+
+  .card-btn {
+    font-size: var(--spacing-s);
+    padding: 1.2rem 0;
+  }
+  .primary-heading {
+    margin-top: var(--spacing-xs);
+    margin-bottom: -0.8rem;
+  }
+  .card-price {
+    font-size: var(--fs-l);
+  }
+  .card-subscription {
+    font-size: calc(var(--fs-m) + 0.1rem);
+  }
+  .card-description {
+    margin-bottom: -1.2rem;
+  }
+  .card-price {
+    padding: var(--spacing-l) 0;
+  }
+} /* end of card */
